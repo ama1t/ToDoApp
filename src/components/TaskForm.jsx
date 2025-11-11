@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function TaskForm({ addTask }) {
+export default function Taskform({ addTask }) {
     const [task, setTask] = useState('');
     const [priority, setPriority] = useState('medium');
     const [category, setCategory] = useState('General');
@@ -16,7 +16,7 @@ export default function TaskForm({ addTask }) {
     }
 
     return (
-        <form onSubmit={handlesubmit} id="task-form">
+        <form onSubmit={handlesubmit} className='task-form'>
             <div id="inp">
                 <input type='text' placeholder='Enter the task'
                     value={task}
@@ -38,7 +38,7 @@ export default function TaskForm({ addTask }) {
                 </select>
             </div>
 
-            <h1>{task} {priority} {category}</h1>
+            {/* <h1>{task} {priority} {category}</h1> */}
         </form>
 
     )
