@@ -1,23 +1,24 @@
 /* Minimal, clean styles for the Task Manager */
 
-* {
-  box-sizing: border-box;
-  background-color: lightseagreen;
-}
-
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background: #f7f7f8;
+  box-sizing: border-box;
+  background-color: rgb(235, 235, 235);
   color: #111111;
+}
+
+#root {
+  background-color: #0bc28e;
 }
 
 .App {
   max-width: 720px;
   margin: 0 auto;
   padding: 24px;
+  background-color: #0bc28e;
 }
 
 header {
@@ -84,7 +85,6 @@ header p {
 .task-list {
   list-style: none;
   padding: 0;
-  margin: 16px 0;
 }
 
 .task-list li {
@@ -96,6 +96,7 @@ header p {
   border: 1px solid #eeeeee;
   border-radius: 8px;
   background: #ffffff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .task-list li.completed {
@@ -103,13 +104,18 @@ header p {
   opacity: 0.7;
 }
 
+.task-list #task {
+  background: #a8abaa;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding: 3px;
+}
+
 .task-list button {
   background: none;
   border: 0;
-  color: #047857;
+  color: #0bc28e;
   cursor: pointer;
-  padding: 6px 8px;
-  border-radius: 6px;
 }
 
 .progress-tracker {
